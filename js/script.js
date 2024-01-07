@@ -9,8 +9,30 @@ window.addEventListener('scroll', function() {
 
   var elements = document.querySelectorAll('poczotek');
 
-// Iteruj przez wszystkie znalezione elementy
 elements.forEach(function(element) {
-    // Zmiana identyfikatora na nowy
     element.id = 'biotech-trad';
 });
+
+var music = document.getElementById("mussic");
+var btn = document.getElementById("btn");
+
+btn.onclick = function(){
+    if(music.paused){
+        music.play();
+        btn.style = "opacity: 1";
+        showply = setInterval(puls, 450);
+    }else{
+        music.pause();
+        btn.style = "opacity: .7";
+        clearInterval(showply);
+    }
+};
+
+function puls() {
+  var cel = parseFloat(btn.style.opacity);
+  var aktualny = cel === 0.7 ? 1 : 0.7;
+  btn.style.opacity = aktualny;
+};
+
+var audio = document.getElementById("mussic");
+audio.volume = 0.5;

@@ -56,7 +56,7 @@ header {
     transition: background-color 0.3s ease; 
 }
 
-.logo-atom a img {
+.logo-atom img {
     height: 50px;
     margin: 5px 0px;
     width: auto;
@@ -65,9 +65,10 @@ header {
     top: 0;
     opacity: .7;
     transition: .28s ease;
+    cursor: pointer;
 }
 
-.logo-atom a img:hover {
+.logo-atom img:hover {
     opacity: 1;
 }
 
